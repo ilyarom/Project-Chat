@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Чат</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='css/sweetalert2.css' type='text/css' media='all' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel">
+        <div class="logo">
+          <div class="logoimg" href="#"></div>
+          <div class="logolabel" href="#"></div>
+        </div>
+        <ul id="menu">
+	      <li>  
+            <a href="#">Выбор канала</a>
+		    <ul>
+		      <li><a class="room" href="#" name="red">Red</a></li>
+			  <li><a class="room" href="#" name="green">Green</a></li>
+			  <li><a class="room" href="#" name="yellow">Yellow</a></li>
+              <li><a class="room" href="#" name="blue">Blue</a></li>
+              <li><a class="room" href="#" name="chocolate">Chocolate</a></li>
+              <li><a class="room" href="#" name="pink">Pink</a></li>
+              <li><a class="room" href="#" name="indigo">Indigo</a></li>
+              <li><a class="room" href="#" name="black">Black</a></li>
+              <li><a class="room" href="#" name="white">White</a></li>
+              <li><a class="room" href="#" name="orange">Orange</a></li>
+		    </ul>
+          </li>
+	      <li><a class="login" href="login.html">Выход</a></li>
+        </ul>    
+      </div>
+      <div id="msg-box">
+        <ul>
+        </ul>
+      </div>
+      <form id="t-box" action="?">
+        Имя: <input type="text" class='name' disabled >
+        <input type="text" class='msg' maxlength="25" />
+        <input type="submit" value="Отправить" class="send" />
+      </form>   
+    </div>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timers.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> 
+    <script src='js/sweetalert2.min.js'></script>
+  </body>
+</html>
