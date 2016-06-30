@@ -1,7 +1,6 @@
 $(function()
 {
     var msgBox = document.getElementById("msg-box");
-    //Если куки с именем не пустые, тащим имя и заполняем форму с именем
     if($.cookie("name") != null)
     {
         $("#t-box input[class='name']").attr("value", $.cookie("name"));
@@ -10,9 +9,7 @@ $(function()
     {
         window.location.replace("login.html");
     }
-    //Переменная отвечает за id последнего пришедшего сообщения
     var maxId = 0;
-    //Функция обновления сообщений чата
     var currTable = "green";
     $(".room").click(function(){
         currTable = $(this).attr("name");
@@ -69,7 +66,6 @@ $(function()
     });
     function get_message_chat()
     {
-    //Генерируем Ajax запрос  
         $.ajaxSetup(
         {
             url: "chat.php",
@@ -77,10 +73,8 @@ $(function()
             data: "event=get&maxId="+maxId+"&currTable="+currTable
         });
     
-        //Отправляем запрос
         $.ajax(
         {
-            //Если все удачно
             success: function(data)
             {
                 var obj = JSON.parse(data);
@@ -125,8 +119,6 @@ $(function()
                 'error'
             )
         }
-    }
-    //Возвращаем false, чтобы форма не отправлялась.
     return false;
     });
 });

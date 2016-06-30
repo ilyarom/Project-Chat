@@ -1,8 +1,6 @@
-  //Событие отправки формы
     $("#login-box").submit(function() 
     {
         var name = $("#login-box input[class='login_username_area']").attr("value");  
-        //Запрашиваем имя у юзера.
         if(name == "")
         { 
             sweetAlert
@@ -15,10 +13,8 @@
         else
         {
             var password = $("#login-box input[class='password_username_area']").val();
-            //Если сообщение не пустое
             if(password != "")
             {
-                //Чистим форму
                 $.ajax(
                 {
                     type: 'GET',
@@ -29,7 +25,6 @@
                         if (data == 'Success')
                         {
                             window.location.replace("index.html");
-                            //Добавляем в куки имя
                             $.cookie("name", name);
                         }
                         if (data == 'Error-1')
@@ -56,13 +51,12 @@
             else
             {
                 sweetAlert
-                            (
-                                'Упс..',
-                                'Вы не ввели пароль',
-                                'error'
-                            )
+                (
+                    'Упс..',
+                    'Вы не ввели пароль',
+                    'error'
+                )
             }
         }
-        //Возвращаем false, чтобы форма не отправлялась.
         return false;
     });

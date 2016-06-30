@@ -4,7 +4,6 @@
         $res = mysqli_query($link, $query) or die(mysqli_error($link));
         return $res;
     }
-    //Соединяемся с базой
     $link = @mysqli_connect('localhost', 'root', 'qwerty') or die("Не могу соединиться с MySQL.");
     @mysqli_select_db($link, 'chatdb') or die("Не могу подключиться к базе.");
     @mysqli_query('SET NAMES utf8;');
@@ -31,4 +30,4 @@
             $result = setQuery($link, "INSERT INTO $currTable (`name` ,`text` ) VALUES ('".mysqli_real_escape_string($link, $name)."', '".mysqli_real_escape_string($link, $msg)."')");
             echo $result;
             break;
-}
+   }

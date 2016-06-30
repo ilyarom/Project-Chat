@@ -13,7 +13,6 @@
     $res = setQuery($link, $query);
     if (mysqli_num_rows($res) != 0)
     {
-        //$res = setQuery($link, "INSERT INTO user (username, password) VALUES ('".mysqli_real_escape_string($link, $name)."', '".mysqli_real_escape_string($link, $password)."')");
         $row = mysqli_fetch_array($res);
         if ($row['password'] == $password)
         {
